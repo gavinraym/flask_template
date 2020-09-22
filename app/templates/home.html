@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*The style block lets you define the sizes, font, and alignment (plus
+        a ton of other stuff) for each header. This is really handy because it
+        allows you to change the settings for all the text on your website at
+        once. */
+        h1 {text-align: center; font-size: 35px;}
+        h2 {text-align: left; font-size: 25px;}
+        p {margin-left: 25px; text-indent: 15px; font-size: 22px}
+        body {background-color: #cff2f3}
+    </style>
+</head>
+<body>
+    <!--To add headers, add the corresponding tags like this-->
+    <h1>Big header!</h1>
+    <h2>Small header.</h2>
+    <p>This is a paragraph. Extra white     spaces      and line breaks are ignored
+        when the website is rendered. Text indent (set in the style block) will 
+        indent only the first line of this paragraph. 
+    </p>
+    <!--To add a line break, use a br tag, or hr to add an actual line on screen-->
+    <br>
+    <hr>
+    <br>
+    <!--Buttons and input fields must be added in a form -->
+    <form action="/project" method="POST" >
+        <input type="submit" name="name" value="Go to project page" />
+    </form>
+
+</body>
+</html>

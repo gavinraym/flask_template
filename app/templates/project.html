@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {text-align: center; font-size: 35px;}
+        p {margin-left: 50px; margin-right: 50px; font-size: 22;}
+        body {background-color: #cff2f3}
+        /*In this style block, I am defining some columns and rows!
+         I'm going to have three columns, so I'm setting the width 
+         to 1/3rd the screen size.*/
+        .column{
+            float: left;
+            width: 25%;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+<body>
+    <!--We must put our columns in a row for them to render together-->
+    <h1><img src="static/heavy-metal.jpg" style='width:250px;' /></h1>
+    <div class="row">
+        <!--Now let us access the full power of jinja2! When using jinja,
+        we put our commands inside percent/curly braces  for loops and double
+        curly braces to access variables.-->
+        {% for lyric in var1 %}
+
+        <!--I'm going to make a column for each type of heavy metal, and
+        then add the lyrics for that type in the paragraph-->
+        <div class="column">
+            <h1>{{lyric[0]}}</h1>
+            <p>{{lyric[1]}}</p>
+        </div>
+
+        <!--Jinja loops must be ended like this.-->
+        {% endfor %}
+
+    <!--Ending the row block-->
+    </div>
+
+    <!--Buttons and input fields must be added in a form.-->
+    <!--I put it in a header to center it.-->
+    <h1>
+    <form action="/" method="POST" >
+        <input type="submit" name="name" value="Return to Home" />
+    </form>
+    </h1>
+</body>
+</head>
